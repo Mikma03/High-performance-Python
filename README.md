@@ -30,9 +30,9 @@ Cover the following topics:
 
 * Chapter 1: Profiling
 
-    What are the ways to profile your code?
+    - What are the ways to profile your code?
     
-    What insights can I gain from a profile?
+    - What insights can I gain from a profile?
 
 
 * Chapter 2: Understanding Performant Programming
