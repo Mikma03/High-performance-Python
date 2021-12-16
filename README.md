@@ -114,7 +114,3 @@ Cover the following topics:
  
     - What are tries and probabilistic data structures?
 
-
-* Chapter 12: Lessons from the Field (no code)
-
-    - Some stories from the field on performance python
