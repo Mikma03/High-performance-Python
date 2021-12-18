@@ -1,6 +1,5 @@
 import math
 
-
 def check_prime(number):
     sqrt_number = math.sqrt(number)
     for i in range(2, int(sqrt_number) + 1):

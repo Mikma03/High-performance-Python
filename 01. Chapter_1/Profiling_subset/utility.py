@@ -11,6 +11,7 @@ def test_some_fn():
 # are injected by their respective tools or they're absent
 # if these tools aren't being used (in which case we need to substite
 # a dummy @profile decorator)
+
 if 'line_profiler' not in dir() and 'profile' not in dir():
     def profile(func):
         def inner(*args, **kwargs):
