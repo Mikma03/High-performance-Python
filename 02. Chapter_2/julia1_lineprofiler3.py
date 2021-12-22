@@ -64,3 +64,5 @@ def calc_pure_python(draw_output, desired_width, max_iterations):
 # reasonable defaults for a laptop
 # set draw_output to True to use PIL to draw an image
 calc_pure_python(draw_output=False, desired_width=1000, max_iterations=300)
+
+
