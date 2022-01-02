@@ -72,24 +72,24 @@ print(f"apply raw=True {t2 - t1}")
 assert_almost_equal(results_ols_lstsq[0], results[0])
 assert_array_almost_equal(results, results_ols_lstsq)  
 
-#@numba.jit(nopython=True)
-#def ols_lstsq_raw_values_numba_ORIG(row):
-#    # np.arange(row.shape[0], dtype=np.float) fails
-#    # np.arange(row.shape[0], dtype=np.float_) fails
-#    # vstack # note [] no good if non-homogenous types, needs ()
-#    idx = np.arange(row.shape[0]) 
-#    ones = np.ones(row.shape[0])
-#    A = np.vstack((idx, ones)).T 
-#    m, c = np.linalg.lstsq(A, row, rcond=-1.0)[0]
-#    return m
+@numba.jit(nopython=True)
+def ols_lstsq_raw_values_numba_ORIG(row):
+   # np.arange(row.shape[0], dtype=np.float) fails
+   # np.arange(row.shape[0], dtype=np.float_) fails
+   # vstack # note [] no good if non-homogenous types, needs ()
+   idx = np.arange(row.shape[0]) 
+   ones = np.ones(row.shape[0])
+   A = np.vstack((idx, ones)).T 
+   m, c = np.linalg.lstsq(A, row, rcond=-1.0)[0]
+   return m
 
-#@numba.jit(nopython=True)
-#def ols_lstsq_raw_values_numba(row):
-#    X = np.arange(row.shape[0]) 
-#    ones = np.ones(row.shape[0])
-#    A = np.vstack((X, ones)).T 
-#    m, c = np.linalg.lstsq(A, row, rcond=-1.0)[0]
-#    return m
+@numba.jit(nopython=True)
+def ols_lstsq_raw_values_numba(row):
+   X = np.arange(row.shape[0]) 
+   ones = np.ones(row.shape[0])
+   A = np.vstack((X, ones)).T 
+   m, c = np.linalg.lstsq(A, row, rcond=-1.0)[0]
+   return m
 
 ols_lstsq_raw_values_numba = jit(ols_lstsq_raw, nopython=True)
 
