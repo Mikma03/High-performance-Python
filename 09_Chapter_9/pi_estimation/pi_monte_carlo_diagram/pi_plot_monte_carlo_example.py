@@ -22,6 +22,6 @@ if __name__ == "__main__":
     plt.xticks([0.0, 1.0])
     plt.yticks([0.0, 1.0])
     plt.title("Pi estimated as {} using \n{:,} Monte Carlo dart throws".format(pi, int(nbr_items)))
-    #plt.show()
+    plt.show()
     plt.tight_layout()
     plt.savefig("09_pi_plot_monte_carlo_example.png")
