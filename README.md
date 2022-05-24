@@ -1,30 +1,12 @@
 # High-performance-Python
 
-Cover the following topics:
+<!-- TOC -->
 
+- [High-performance-Python](#high-performance-python)
+- [Detailed information in chapters](#detailed-information-in-chapters)
+- [Additionals materials](#additionals-materials)
 
-* Background on the machinery of a computer
-
-* Lists and tuples
-
-* Dictionaries and sets—memory allocation strategies
-
-* Iterators
-
-* Pure Python approaches
-
-* Matrices with numpy
-
-* Compilation and just-in-time computing—processing
-
-* Concurrency—ways to move data efficiently
-
-* Multiprocessing
-
-* Cluster computing
-
-* Using less RAM—approaches
-
+<!-- /TOC -->
 
 # Detailed information in chapters
 
@@ -114,3 +96,7 @@ Cover the following topics:
  
     - What are tries and probabilistic data structures?
 
+# Additionals materials
+
+- High-Performance Computing with Python 3.x
+    - https://subscription.packtpub.com/video/application-development/9781789956252/101415/101437/introduction-to-cython
